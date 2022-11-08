@@ -11,6 +11,11 @@ const UserSchema = new Schema<UserSchemaStrcuture>({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 });
 
 const User = model<UserSchemaStrcuture>("User", UserSchema, "users");
